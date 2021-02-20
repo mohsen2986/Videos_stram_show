@@ -2,11 +2,12 @@ plugins {
     id (BuildPlugins.androidApplication)
     id (BuildPlugins.kotlinAndroid)
     id (BuildPlugins.kotlinKapt)
-    id ("kotlin-android-extensions")
+    id (BuildPlugins.kotlinExt)
+    id (BuildPlugins.kotlinSafeArgs)
 }
 
 android {
-    compileSdkVersion (30)
+    compileSdkVersion (AndroidSdk.compile)
     buildToolsVersion (AndroidSdk.buildToolsVersion)
 
     defaultConfig {
@@ -48,6 +49,7 @@ dependencies {
     implementation(MobileUIDependencies.appCompat)
     implementation(MobileUIDependencies.constraintLayout)
     implementation(MobileUIDependencies.materialDesign)
+
     implementation("org.jetbrains.kotlin:kotlin-stdlib:${rootProject.extra["kotlin_version"]}")
     implementation("androidx.legacy:legacy-support-v4:1.0.0")
 //     KODEIN
@@ -98,6 +100,6 @@ dependencies {
     implementation(MobileUIDependencies.stethoOkHttp)
     implementation(MobileUIDependencies.androidXFragmentKtx)
     implementation(MobileUIDependencies.jalaliTimePicker)
-
-
+    implementation(MobileUIDependencies.imageSlider)
+    implementation(MobileUIDependencies.exoPlayer)
 }

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/splashScreenFragment"
+    >
+
+
+    <fragment
+        android:id="@+id/mainPageFragment"
+        android:name="com.videostreamshows.ui.fragment.mainPage.MainPageFragment"
+        android:label="fragment_main_page"
+        tools:layout="@layout/fragment_main_page" >
+        <action
+            android:id="@+id/action_mainPageFragment_to_movieDetailsFragment"
+            app:destination="@id/movieDetailsFragment" />
+        <action
+            android:id="@+id/action_mainPageFragment_to_tvDetailsFragment"
+            app:destination="@id/tvDetailsFragment" />
+        <action
+            android:id="@+id/action_mainPageFragment_to_topMoviesFragment"
+            app:destination="@id/topMoviesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/playVideoFragment"
+        android:name="com.videostreamshows.ui.fragment.playVideo.PlayVideoFragment"
+        android:label="fragment_play_video"
+        tools:layout="@layout/fragment_play_video"
+        />
+    <fragment
+        android:id="@+id/movieDetailsFragment"
+        android:name="com.videostreamshows.ui.fragment.movieDetails.MovieDetailsFragment"
+        android:label="fragment_movie_details"
+        tools:layout="@layout/fragment_movie_details" >
+        <action
+            android:id="@+id/action_movieDetailsFragment_to_playVideoFragment"
+            app:destination="@id/playVideoFragment"
+            />
+        <argument
+            android:name="movie_id"
+            app:argType="string"
+            />
+        <argument
+            android:name="poster"
+            app:argType="string"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/tvDetailsFragment"
+        android:name="com.videostreamshows.ui.fragment.tvDetails.TvDetailsFragment"
+        android:label="fragment_tv_details"
+        tools:layout="@layout/fragment_tv_details" >
+        <action
+            android:id="@+id/action_tvDetailsFragment_to_playVideoFragment"
+            app:destination="@id/playVideoFragment"
+            />
+        <argument
+            android:name="tv_id"
+            app:argType="string"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="com.videostreamshows.ui.fragment.splashScreen.SplashScreenFragment"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash_screen" >
+        <action
+            android:id="@+id/action_splashScreenFragment_to_mainPageFragment"
+            app:destination="@id/mainPageFragment"
+            app:popUpTo="@id/splashScreenFragment"
+            app:popUpToInclusive="true"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/topMoviesFragment"
+        android:name="com.videostreamshows.ui.fragment.topMoviesList.TopMoviesFragment"
+        android:label="fragment_top_movies"
+        tools:layout="@layout/fragment_top_movies"
+        />
+</navigation>

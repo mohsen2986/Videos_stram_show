@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Video Stream Shows</string>
+    <string name="transition">transition_detail</string>
 </resources>

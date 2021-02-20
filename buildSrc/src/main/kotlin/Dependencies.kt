@@ -24,11 +24,13 @@ object BuildPlugins {
     const val kotlin = "kotlin"
     const val javaLibrary = "java-library"
     const val kotlinKapt = "kotlin-kapt"
+    const val kotlinExt = "kotlin-android-extensions"
+    const val kotlinSafeArgs = "androidx.navigation.safeargs.kotlin"
 }
 
 
 object AndroidSdk {
-    const val min = 21
+    const val min = 23
     const val compile = 30
     const val target = compile
     const val buildToolsVersion = "29.0.3"
@@ -68,7 +70,7 @@ object MobileUIDependencies{
         const val material_button = "1.2.5"
         const val photo_view = "2.3.0"
         const val auto_image_slider = "1.3.2"
-        const val lottie_animation = "3.0.7"
+        const val lottie_animation = "3.5.0"
         const val navigation =  "2.2.1"
         const val room = "2.2.5"
         const val legcy_support = "1.0.0"
@@ -151,6 +153,9 @@ object MobileUIDependencies{
 
     // IMAGE COMPOSER
     const val composer =  "id.zelory:compressor:3.0.0"
+
+    const val imageSlider = "com.github.smarteist:autoimageslider:1.3.2"
+    const val exoPlayer = "com.google.android.exoplayer:exoplayer:2.13.1"
 
 
 }
